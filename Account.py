@@ -1,4 +1,5 @@
 import requests, json
+from config import *
 
 class Account:
 
@@ -6,7 +7,7 @@ class Account:
     BASE_URL = ''
     account = {}
     
-    def __init__(self, BASE_URL, API_KEY, API_SECRET):
+    def __init__(self):
         self.headers['APCA-API-KEY-ID'] = API_KEY
         self.headers['APCA-API-SECRET-KEY'] = API_SECRET
         self.BASE_URL = BASE_URL
