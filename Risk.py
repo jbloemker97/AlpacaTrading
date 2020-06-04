@@ -15,9 +15,15 @@ class Risk(Account):
         return int(share_size)
 
     def get_stop_loss(self, price):
+        """
+            Gets stop loss on LONG trades only
+        """
         return price - (float(price) * self.max_risk_per_trade)
 
     def get_target(self, price):
+        """
+            Gets target on LONG trades only
+        """
         return price + (float(price) * (self.max_risk_per_trade * 3))
 
     def total_shutdown(self):
